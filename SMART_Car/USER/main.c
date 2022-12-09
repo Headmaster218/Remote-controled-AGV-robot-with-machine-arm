@@ -31,10 +31,10 @@ int main(void)
 	LED_Init();
 	delay_init();
 	Soft_IIC1_Init();
-//	TIM1_Int_Init(1000, 720);//72,000,000/1000/720
+	TIM1_Int_Init(1000, 720);//72,000,000/1000/720
  uart_init(19200);
 	Motor_Init();
-	OLED_Init();
+	//OLED_Init();
 	//delay_ms(1500);
 	while (1)
 	{
@@ -49,7 +49,7 @@ int main(void)
 //定时器3中断服务程序
 void TIM1_UP_IRQHandler(void) // TIM3中断
 {
-	//Car_Move();
+	Car_Move();
 	TIM1->SR = 0;
 	//LED0 = !LED0;
 

@@ -43,7 +43,7 @@ void uart_init(u32 bound){
   USART_Cmd(USART1, ENABLE);                    //Ê¹ÄÜ´®¿Ú1 
 
 }
-
+/*
 extern short recv_time;
 u8 recive_buf[10];
 u8 recv_pack_cnt = 0;
@@ -124,8 +124,8 @@ void USART1_IRQHandler(void)
 				}
 			}
 }
+*/
 
-/*
 union _usart_receive_data usart_receive_data;
 u8 recv_pack_cnt = 0;
 void USART1_IRQHandler(void) 
@@ -149,4 +149,4 @@ void USART1_IRQHandler(void)
 				}
 				recv_pack_cnt =0;
 			}
-}*/
+}
